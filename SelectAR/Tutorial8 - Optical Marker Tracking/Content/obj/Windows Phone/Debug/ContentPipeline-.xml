@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\data\Fonts\DebugFont.spritefont</Source>
+      <Name>DebugFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\DebugFont.xnb</Output>
+      <Time>2013-03-26T21:59:04.7045454-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\data\Fonts\Sample.spritefont</Source>
+      <Name>Sample</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\Sample.xnb</Output>
+      <Time>2013-03-30T21:58:41.0212154-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MarkerImage_320x240.jpg</Source>
+      <Name>MarkerImage_320x240</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\MarkerImage_320x240.xnb</Output>
+      <Time>2013-03-26T22:00:43.8104509-04:00</Time>
+    </Item>
+    <Item>
+      <Source>diffuse.bmp</Source>
+      <Name>diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\diffuse.xnb</Output>
+      <Time>2013-03-31T23:30:44.3448333-04:00</Time>
+    </Item>
+    <Item>
+      <Source>specular.bmp</Source>
+      <Name>specular</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\specular.xnb</Output>
+      <Time>2013-03-31T23:30:44.4758444-04:00</Time>
+    </Item>
+    <Item>
+      <Source>floor_wood.jpg</Source>
+      <Name>floor_wood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\floor_wood.xnb</Output>
+      <Time>2013-04-16T19:09:59.1753896-04:00</Time>
+    </Item>
+    <Item>
+      <Source>grass.jpg</Source>
+      <Name>grass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\grass.xnb</Output>
+      <Time>2013-04-16T19:12:56.3634317-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID Null="true" />
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Content\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2012-09-06T15:52:54-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-02-04T23:30:59.6722619-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

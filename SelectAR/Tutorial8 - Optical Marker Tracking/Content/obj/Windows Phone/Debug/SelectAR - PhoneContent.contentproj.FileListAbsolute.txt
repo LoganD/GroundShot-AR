@@ -1,0 +1,1 @@
+C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Content\obj\Windows Phone\Debug\SelectAR - PhoneContent.contentprojResolveAssemblyReference.cache
