@@ -97,6 +97,10 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             menu,
             pause,
         }
+        //shooter
+        private Material shooterMat;
+        int shooterID = 0;
+        
 
 
 #if USE_PATTERN_MARKER
@@ -128,7 +132,6 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             gameService = service;
             // Initialize the GoblinXNA framework
             State.InitGoblin(service, content, "");
-
             LoadContent(content);
 
             //State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;
@@ -137,6 +140,9 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             scene = new Scene();
             scene.BackgroundColor = Color.Black;
             scene.PhysicsEngine = new MataliPhysics();
+            //Set up gravity
+            scene.PhysicsEngine.Gravity = 1000;
+            scene.PhysicsEngine.GravityDirection = -Vector3.UnitZ;
             // Set up the lights used in the scene
             CreateLights();
             CreateCamera();
@@ -146,6 +152,7 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             State.ShowNotifications = true;
             Notifier.Font = sampleFont;
             State.ShowFPS = true;
+            State.ShowTriangleCount = true;
             random = new Random();
             buttonsInMenu = new List<MoleHoleForButton>();
             buttonsInConfigure = new List<MoleHoleForButton>();
@@ -156,8 +163,8 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             SetupPauseView();
             ShowMenu();
             //StartGame();
-
             MouseInput.Instance.MousePressEvent += new HandleMousePress(MousePressHandler);
+            MouseInput.Instance.MouseClickEvent += new HandleMouseClick(MouseClickHandler);
         }
 
         private void CreateCamera()
@@ -260,9 +267,11 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
 #endif
             scene.RootNode.AddChild(groundMarkerNode);
             //creat axis for groundMarkerNode
-            //TransformNode groundAxisNode = createAxisNode(1.0f);
-            //groundMarkerNode.AddChild(groundAxisNode);
+            TransformNode groundAxisNode = createAxisNode(1.0f);
 
+            groundMarkerNode.AddChild(groundAxisNode);
+            //groundAxisNode.Translation = new Vector3(0, 0, -20);
+            //scene.RootNode.AddChild(groundAxisNode);
             // Create a geometry node with a model of a box that will be overlaid on
             // top of the ground marker array initially. (When the toolbar marker array is
             // detected, it will be overlaid on top of the toolbar marker array.)
@@ -346,8 +355,15 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
              
             PrimitiveModel groundModel = new PrimitiveModel(groundMesh);
             
+
+
             groundNode = new GeometryNode("ground");
             groundNode.Model = groundModel;
+            // add to physical engine
+            groundNode.Physics.Collidable = true;
+            groundNode.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
+            groundNode.AddToPhysicsEngine = true;
+
             groundMat = new Material();
             groundMat.Diffuse = Color.White.ToVector4();
             groundMat.Specular = Color.White.ToVector4();
@@ -380,8 +396,12 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
                 moleHoles.Add(moleHole);
             }*/
 
-            
 
+            // Create a material for shooting box models
+            shooterMat = new Material();
+            shooterMat.Diffuse = Color.Pink.ToVector4();
+            shooterMat.Specular = Color.Yellow.ToVector4();
+            shooterMat.SpecularPower = 10;
         }
 
         private void CreateUIPanel()
@@ -493,6 +513,12 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
 
         public void Update(TimeSpan elapsedTime, bool isActive)
         {
+            /*
+            Quaternion rotate = new Quaternion();
+            Vector3 trans = new Vector3();
+            Vector3 scale = new Vector3();
+            scene.PhysicsEngine.GravityDirection = (groundMarkerNode.WorldTransformation).Forward;
+            */
             animateMoles();
             scene.Update(elapsedTime, false, isActive);
         }
@@ -561,9 +587,76 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
                 return;
             moleHoles[randomInt].showMole(800);
         }
-
-        private void MousePressHandler(int n, Point point)
+        private void ShootBox(Vector3 near, Vector3 far)
         {
+            GeometryNode shootBox = new GeometryNode("ShooterBox" + shooterID++);
+            shootBox.Model = boxModel;
+            shootBox.Material = shooterMat;
+            shootBox.Physics.Interactable = true;
+            shootBox.Physics.Collidable = true;
+            shootBox.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
+            shootBox.Physics.Mass = 600f;
+            shootBox.AddToPhysicsEngine = true;
+
+            // Calculate the direction to shoot the box based on the near and far point
+            Vector3 linVel = far - near;
+            linVel.Normalize();
+            // Multiply the direction with the velocity of 20
+            linVel *= 800f;
+
+            // Assign the initial velocity to this shooting box
+            shootBox.Physics.InitialLinearVelocity = linVel;
+
+            TransformNode shooterTrans = new TransformNode();
+            shooterTrans.Translation = near;
+            shooterTrans.Scale = new Vector3(10, 10, 10);
+
+            groundMarkerNode.AddChild(shooterTrans);
+            shooterTrans.AddChild(shootBox);
+        }
+        private void MouseClickHandler(int button, Point mouseLocation)
+        {
+            // Shoot a box if left mouse button is clicked
+            if (button == MouseInput.LeftButton)
+            {
+                Vector3 nearSource = new Vector3(mouseLocation.X, mouseLocation.Y, -12);
+                Vector3 farSource = new Vector3(mouseLocation.X, mouseLocation.Y, -10);
+
+                Vector3 nearPoint = gameService.GraphicsDevice.Viewport.Unproject(nearSource,
+                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
+                Vector3 farPoint = gameService.GraphicsDevice.Viewport.Unproject(farSource,
+                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
+
+                ShootBox(nearPoint, farPoint);
+            }
+        }
+        private void MousePressHandler(int button, Point point)
+        {/*
+            if (button == MouseInput.LeftButton)
+            {
+                Vector3 nearSource = new Vector3(point.X, point.Y, -5000);
+                Vector3 farSource = new Vector3(point.X, point.Y, -5);
+
+                Vector3 nearPoint = gameService.GraphicsDevice.Viewport.Unproject(nearSource,
+                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
+                Vector3 farPoint = gameService.GraphicsDevice.Viewport.Unproject(farSource,
+                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
+                GeometryNode shootBox = new GeometryNode("ShooterBox" + shooterID++);
+                shootBox.Model = boxModel;
+                shootBox.Material = shooterMat;
+                shootBox.Physics.Interactable = true;
+                shootBox.Physics.Collidable = true;
+                shootBox.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
+                shootBox.Physics.Mass = 600f;
+                shootBox.AddToPhysicsEngine = false;
+
+                TransformNode shooterTrans = new TransformNode();
+                shooterTrans.Translation = nearPoint;
+                shooterTrans.Scale = new Vector3(10, 10, 10);
+
+                groundMarkerNode.AddChild(shooterTrans);
+                shooterTrans.AddChild(shootBox);
+            }*/
             GeometryNode selectedObj = selectObj(point);
             if (selectedObj == null)
                 return;

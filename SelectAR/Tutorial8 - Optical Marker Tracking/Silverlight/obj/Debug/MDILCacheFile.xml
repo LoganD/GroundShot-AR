@@ -1,61 +1,61 @@
-﻿<xapCache source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\Tutorial8___Optical_Marker_Tracking___Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/17/2013 9:45:08 PM">
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/2/2013 4:35:51 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\Background.png" archivePath="Background.png" lastWriteTime="3/26/2013 10:00:44 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/26/2013 10:00:44 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\obj\Debug\Tutorial8 - Optical Marker Tracking - Silverlight.dll" archivePath="Tutorial8 - Optical Marker Tracking - Silverlight.dll" lastWriteTime="4/17/2013 9:45:04 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.dll" archivePath="Tutorial8 - Optical Marker Tracking - PhoneLib.dll" lastWriteTime="4/17/2013 9:45:03 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="2/5/2013 2:22:47 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\NyARToolkit4.dll" archivePath="NyARToolkit4.dll" lastWriteTime="2/4/2013 10:52:10 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="2/4/2013 10:52:10 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\NyARToolkit4.markersystem.dll" archivePath="NyARToolkit4.markersystem.dll" lastWriteTime="2/4/2013 10:52:10 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="2/4/2013 10:52:10 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="2/4/2013 10:52:10 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/26/2013 10:00:45 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/29/2013 4:11:26 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\DebugFont.xnb" archivePath="Content\DebugFont.xnb" lastWriteTime="4/16/2013 4:25:06 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="4/16/2013 4:25:07 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\MarkerImage_320x240.xnb" archivePath="Content\MarkerImage_320x240.xnb" lastWriteTime="4/16/2013 4:26:03 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\diffuse.xnb" archivePath="Content\diffuse.xnb" lastWriteTime="4/16/2013 4:26:05 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\specular.xnb" archivePath="Content\specular.xnb" lastWriteTime="4/16/2013 4:26:06 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\floor_wood.xnb" archivePath="Content\floor_wood.xnb" lastWriteTime="4/16/2013 7:10:11 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\grass.xnb" archivePath="Content\grass.xnb" lastWriteTime="4/16/2013 7:13:02 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\NyARIdGroundArray.xml" archivePath="NyARIdGroundArray.xml" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\NyARToolkitGroundArray.xml" archivePath="NyARToolkitGroundArray.xml" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\NyARToolkitIDGroundArray.xml" archivePath="NyARToolkitIDGroundArray.xml" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\camera_para.dat" archivePath="camera_para.dat" lastWriteTime="3/26/2013 10:00:40 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker0.patt" archivePath="marker0.patt" lastWriteTime="3/26/2013 10:00:40 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker1.patt" archivePath="marker1.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker10.patt" archivePath="marker10.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker11.patt" archivePath="marker11.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker12.patt" archivePath="marker12.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker13.patt" archivePath="marker13.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker14.patt" archivePath="marker14.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker15.patt" archivePath="marker15.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker16.patt" archivePath="marker16.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker17.patt" archivePath="marker17.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker18.patt" archivePath="marker18.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker19.patt" archivePath="marker19.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker2.patt" archivePath="marker2.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker20.patt" archivePath="marker20.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker21.patt" archivePath="marker21.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker22.patt" archivePath="marker22.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker23.patt" archivePath="marker23.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker24.patt" archivePath="marker24.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker25.patt" archivePath="marker25.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker26.patt" archivePath="marker26.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker27.patt" archivePath="marker27.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker28.patt" archivePath="marker28.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker29.patt" archivePath="marker29.patt" lastWriteTime="3/26/2013 10:00:41 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker3.patt" archivePath="marker3.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker30.patt" archivePath="marker30.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker4.patt" archivePath="marker4.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker5.patt" archivePath="marker5.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker6.patt" archivePath="marker6.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker7.patt" archivePath="marker7.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker8.patt" archivePath="marker8.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\marker9.patt" archivePath="marker9.patt" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\patt.hiro" archivePath="patt.hiro" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\MarkerImageHiro.jpg" archivePath="MarkerImageHiro.jpg" lastWriteTime="3/26/2013 10:00:42 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/26/2013 10:00:44 PM" />
-  <file source="C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Background.png" archivePath="Background.png" lastWriteTime="3/26/2013 10:00:44 PM" />
+﻿<xapCache source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\Tutorial8___Optical_Marker_Tracking___Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/21/2013 6:32:15 PM">
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\Background.png" archivePath="Background.png" lastWriteTime="4/20/2013 9:14:07 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="4/20/2013 9:14:07 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\obj\Debug\Tutorial8 - Optical Marker Tracking - Silverlight.dll" archivePath="Tutorial8 - Optical Marker Tracking - Silverlight.dll" lastWriteTime="4/21/2013 6:32:11 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.dll" archivePath="Tutorial8 - Optical Marker Tracking - PhoneLib.dll" lastWriteTime="4/21/2013 6:32:11 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\NyARToolkit4.dll" archivePath="NyARToolkit4.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\NyARToolkit4.markersystem.dll" archivePath="NyARToolkit4.markersystem.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="4/20/2013 9:14:07 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/20/2013 9:14:07 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\DebugFont.xnb" archivePath="Content\DebugFont.xnb" lastWriteTime="4/21/2013 12:45:47 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="4/21/2013 12:45:47 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\MarkerImage_320x240.xnb" archivePath="Content\MarkerImage_320x240.xnb" lastWriteTime="4/21/2013 12:45:47 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\diffuse.xnb" archivePath="Content\diffuse.xnb" lastWriteTime="4/21/2013 12:45:47 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\specular.xnb" archivePath="Content\specular.xnb" lastWriteTime="4/21/2013 12:45:48 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\floor_wood.xnb" archivePath="Content\floor_wood.xnb" lastWriteTime="4/21/2013 12:45:48 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\grass.xnb" archivePath="Content\grass.xnb" lastWriteTime="4/21/2013 12:45:48 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARIdGroundArray.xml" archivePath="NyARIdGroundArray.xml" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARToolkitGroundArray.xml" archivePath="NyARToolkitGroundArray.xml" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARToolkitIDGroundArray.xml" archivePath="NyARToolkitIDGroundArray.xml" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\camera_para.dat" archivePath="camera_para.dat" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker0.patt" archivePath="marker0.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker1.patt" archivePath="marker1.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker10.patt" archivePath="marker10.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker11.patt" archivePath="marker11.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker12.patt" archivePath="marker12.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker13.patt" archivePath="marker13.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker14.patt" archivePath="marker14.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker15.patt" archivePath="marker15.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker16.patt" archivePath="marker16.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker17.patt" archivePath="marker17.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker18.patt" archivePath="marker18.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker19.patt" archivePath="marker19.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker2.patt" archivePath="marker2.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker20.patt" archivePath="marker20.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker21.patt" archivePath="marker21.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker22.patt" archivePath="marker22.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker23.patt" archivePath="marker23.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker24.patt" archivePath="marker24.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker25.patt" archivePath="marker25.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker26.patt" archivePath="marker26.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker27.patt" archivePath="marker27.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker28.patt" archivePath="marker28.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker29.patt" archivePath="marker29.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker3.patt" archivePath="marker3.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker30.patt" archivePath="marker30.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker4.patt" archivePath="marker4.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker5.patt" archivePath="marker5.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker6.patt" archivePath="marker6.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker7.patt" archivePath="marker7.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker8.patt" archivePath="marker8.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\marker9.patt" archivePath="marker9.patt" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\patt.hiro" archivePath="patt.hiro" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\MarkerImageHiro.jpg" archivePath="MarkerImageHiro.jpg" lastWriteTime="4/20/2013 9:14:08 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="4/20/2013 9:14:07 PM" />
+  <file source="C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Background.png" archivePath="Background.png" lastWriteTime="4/20/2013 9:14:07 PM" />
 </xapCache>
