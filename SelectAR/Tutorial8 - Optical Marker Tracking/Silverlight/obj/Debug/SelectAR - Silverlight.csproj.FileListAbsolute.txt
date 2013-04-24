@@ -205,6 +205,15 @@ C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\Sele
 C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\Tutorial8 - Optical Marker Tracking\Silverlight\obj\Debug\XapCacheFile.xml
 C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\grass.xnb
 C:\Users\Steven Feiner\Documents\Visual Studio 2012\Projects\Whack-a-Friend\SelectAR\bin\Windows Phone\Content\floor_wood.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\MarkerImage_320x240.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\diffuse.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\specular.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\floor_wood.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\grass.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\Arial-24-Vector.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\Sample.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\rubber_ball_01.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARIdGroundArray.xml
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARToolkitGroundArray.xml
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\NyARToolkitIDGroundArray.xml
@@ -244,13 +253,6 @@ C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\pa
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\MarkerImageHiro.jpg
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\ApplicationIcon.png
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Background.png
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\DebugFont.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\Sample.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\MarkerImage_320x240.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\diffuse.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\specular.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\floor_wood.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Content\grass.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - Silverlight.dll
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - Silverlight.pdb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\bin\Windows Phone\AppManifest.xaml

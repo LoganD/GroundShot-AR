@@ -1,7 +1,9 @@
-Content\DebugFont.xnb
-Content\Sample.xnb
 Content\MarkerImage_320x240.xnb
 Content\diffuse.xnb
 Content\specular.xnb
 Content\floor_wood.xnb
 Content\grass.xnb
+Content\Arial-24-Vector.xnb
+Content\DebugFont.xnb
+Content\Sample.xnb
+Content\rubber_ball_01.xnb

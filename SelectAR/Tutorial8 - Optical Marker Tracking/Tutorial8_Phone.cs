@@ -40,6 +40,9 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using GoblinXNA.Physics;
 using GoblinXNA.Physics.Matali;
+using Komires.MataliPhysics;
+using Nuclex.Fonts;
+using MataliPhysicsObject = Komires.MataliPhysics.PhysicsObject;
 using GoblinXNA.UI.UI3D;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -63,11 +66,17 @@ using GoblinXNA.Device.Util;
 using GoblinXNA.Helpers;
 using GoblinXNA.UI;
 using GoblinXNA.UI.UI2D;
-
+using GoblinXNA.Sounds;
+using GoblinXNA.UI.UI3D;
 namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
 {
     public class Tutorial8_Phone : Microsoft.Xna.Framework.Game
     {
+        // SOME PARAMETERS
+        private const int MAX_SHOOTBOX = 5;
+        private const int MAX_BOUNCE = 2;
+
+
         //GraphicsDeviceManager graphics;
         private IGraphicsDeviceService gameService;
         SpriteFont sampleFont;
@@ -90,6 +99,18 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
         private Timer timer;
         private Random random;
         private Mode mode;
+        // SCORE PANEL
+        private G2DLabel scoreLabel;
+        private int score;
+        // COLLISION
+        int collisionCount = 0;
+        private TransformNode[] shootBoxAry;
+        private int shootBoxNextPtr = 0;
+        // A font to render a 3D text
+        VectorFont vectorFont;
+        // A list of 3D texts to display
+        List<Text3DInfo> text3ds;
+        SoundEffect bounceSound;
         private enum Mode
         {
             configure,
@@ -98,7 +119,6 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             pause,
         }
         //shooter
-        private Material shooterMat;
         int shooterID = 0;
         
 
@@ -143,6 +163,8 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             //Set up gravity
             scene.PhysicsEngine.Gravity = 1000;
             scene.PhysicsEngine.GravityDirection = -Vector3.UnitZ;
+            //Set up 3D Text
+            text3ds = new List<Text3DInfo>();
             // Set up the lights used in the scene
             CreateLights();
             CreateCamera();
@@ -151,6 +173,8 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             CreateUIPanel();
             State.ShowNotifications = true;
             Notifier.Font = sampleFont;
+            // Make the debugging message fade out after 3000 ms (3 seconds)
+            Notifier.FadeOutTime = 3000;
             State.ShowFPS = true;
             State.ShowTriangleCount = true;
             random = new Random();
@@ -165,6 +189,7 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             //StartGame();
             MouseInput.Instance.MousePressEvent += new HandleMousePress(MousePressHandler);
             MouseInput.Instance.MouseClickEvent += new HandleMouseClick(MouseClickHandler);
+            shootBoxAry = new TransformNode[MAX_SHOOTBOX];
         }
 
         private void CreateCamera()
@@ -354,16 +379,55 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             groundMesh.NumberOfPrimitives = 2;
              
             PrimitiveModel groundModel = new PrimitiveModel(groundMesh);
-            
-
 
             groundNode = new GeometryNode("ground");
             groundNode.Model = groundModel;
             // add to physical engine
+            /*groundNode.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
             groundNode.Physics.Collidable = true;
-            groundNode.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
+            groundNode.Physics.Interactable = true;
+            groundNode.Physics.Mass = 300;
             groundNode.AddToPhysicsEngine = true;
+            */
 
+            //// Add Bouncing Board
+            // Create a model of box and sphere
+            PrimitiveModel sphereModel = new Sphere(1f, 20, 20);
+
+            // Create our ground plane
+            GeometryNode groundNode1 = new GeometryNode("Ground");
+            groundNode1.Model = boxModel;
+            // Make this ground plane collidable, so other collidable objects can collide
+            // with this ground
+            groundNode1.Physics.Collidable = true;
+            groundNode1.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
+            groundNode1.AddToPhysicsEngine = true;
+            // Define the material name of this ground model
+            groundNode1.Physics.MaterialName = "Ground";
+            // Create a material for the ground
+            Material groundMat1 = new Material();
+            //groundMat.Diffuse = Color.Transparent.ToVector4();
+            //groundMat.Specular = Color.Transparent.ToVector4();
+            groundMat1.Diffuse = Color.Purple.ToVector4();
+            groundMat1.Specular = Color.Yellow.ToVector4();
+            groundMat1.SpecularPower = 20;
+
+            groundNode1.Material = groundMat1;
+
+            // Create a parent transformation for both the ground and the sphere models
+            TransformNode parentTransNode = new TransformNode();
+            parentTransNode.Translation = new Vector3(0, 0, -4);
+
+            // Create a scale transformation for the ground to make it bigger
+            TransformNode groundScaleNode = new TransformNode();
+            groundScaleNode.Scale = new Vector3(350, 250, 6);
+
+            // Add this ground model to the scene
+            groundMarkerNode.AddChild(parentTransNode);
+            parentTransNode.AddChild(groundScaleNode);
+            groundScaleNode.AddChild(groundNode1);
+            ///// END Add Bouncing Board
+            
             groundMat = new Material();
             groundMat.Diffuse = Color.White.ToVector4();
             groundMat.Specular = Color.White.ToVector4();
@@ -386,7 +450,6 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             gameNode.AddChild(menuNode);
             gameNode.AddChild(pauseNode);
             moleHoles = new List<MoleHole>();
-
             /*
             int n = 5;
             for (int i = 0; i < n; i++)
@@ -395,17 +458,59 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
                 playNode.AddChild(moleHole.holeTransNode);
                 moleHoles.Add(moleHole);
             }*/
+        }
+#if !WINDOWS
 
+        private void BoxCollideWithGround(MataliPhysicsObject baseObject, MataliPhysicsObject collidingObject)
+        {
+            String materialName = ((IPhysicsObject)collidingObject.UserTagObj).MaterialName;
+            if (materialName.Equals("Ground"))
+            {
+                // Set the collision sound volume based on the contact speed
+                SoundEffectInstance instance = Sound.Instance.PlaySoundEffect(bounceSound);
+                // Print a text message on the screen
+                Notifier.AddMessage("Contact with ground");
 
-            // Create a material for shooting box models
-            shooterMat = new Material();
-            shooterMat.Diffuse = Color.Pink.ToVector4();
-            shooterMat.Specular = Color.Yellow.ToVector4();
-            shooterMat.SpecularPower = 10;
+                // Create a 3D text to be rendered
+                Text3DInfo text3d = new Text3DInfo();
+                text3d.Text = "BOOM!!";
+                // The larger the contact speed, the longer the 3D text will stay displayed
+                text3d.Duration = 1 * 500;
+                text3d.ElapsedTime = 0;
+                Vector3 contactPosition = Vector3.Zero;
+                baseObject.MainWorldTransform.GetPosition(ref contactPosition);
+                // Scale down the vector font since it's quite large, and display the text
+                // above the contact position
+                text3d.Transform = Matrix.CreateScale(0.03f) *
+                    Matrix.CreateTranslation(contactPosition + Vector3.UnitY * 4)*Matrix.Invert(groundMarkerNode.WorldTransformation);
+                // Add this 3D text to the display list
+                text3ds.Add(text3d);
+                ((ShootBoxNode) ((IPhysicsObject) baseObject.UserTagObj).Container).bounce();
+            }
+            else if (materialName.Equals("mole"))
+            {
+                SoundEffectInstance instance = Sound.Instance.PlaySoundEffect(bounceSound);
+                // Print a text message on the screen
+                Notifier.AddMessage("Hit The Mole!");
+                if (((ShootBoxNode) ((IPhysicsObject) baseObject.UserTagObj).Container).bounceTest())
+                {
+                    ((MoleHole.MoleNode)((IPhysicsObject)collidingObject.UserTagObj).Container).myMoleHole.hit();
+                    score++;                    
+                }
+
+            }
         }
 
+#endif
         private void CreateUIPanel()
         {
+            scoreLabel = new G2DLabel();
+            scoreLabel.TextFont = sampleFont;
+            scoreLabel.Text =
+                "Mole hit: 0";
+            scoreLabel.Bounds = new Rectangle(0, State.Height - 430, 300, 400);
+            scoreLabel.Visible = true;
+            scene.UIRenderer.Add2DComponent(scoreLabel);
         }
 
         private void SetupMenuView()
@@ -504,6 +609,8 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
         {
             sampleFont = content.Load<SpriteFont>("Sample");
             grassText = content.Load<Texture2D>("grass");
+            bounceSound = content.Load<SoundEffect>("rubber_ball_01");
+            vectorFont = content.Load<VectorFont>("Arial-24-Vector");
         }
 
         public void Dispose()
@@ -520,6 +627,20 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             scene.PhysicsEngine.GravityDirection = (groundMarkerNode.WorldTransformation).Forward;
             */
             animateMoles();
+            List<Text3DInfo> removeList = new List<Text3DInfo>();
+            for (int i = 0; i < text3ds.Count; i++)
+            {
+                // Increment the elapsed time
+                text3ds[i].ElapsedTime += (float) (elapsedTime.Milliseconds*0.1);
+                // If the elapsed time becomes larger than the duration, then remove the
+                // 3D text from the display list
+                if (text3ds[i].ElapsedTime > text3ds[i].Duration)
+                    removeList.Add(text3ds[i]);
+            }
+
+            for (int i = 0; i < removeList.Count; i++)
+                text3ds.Remove(removeList[i]);
+            scoreLabel.Text = "Mole hit: "+score;
             scene.Update(elapsedTime, false, isActive);
         }
 
@@ -528,6 +649,25 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             State.Device.Viewport = viewport;
             UI2DRenderer.WriteText(Vector2.Zero, label, new Color(0.5f, 0.5f, 0.5f),
                 sampleFont, GoblinEnums.HorizontalAlignment.Left, GoblinEnums.VerticalAlignment.Bottom);
+            if (text3ds.Count > 0)
+            {
+                // Catch exception in case text3ds becomes empty after deletion in Update
+                try
+                {
+                    Text3DInfo[] text3DArray = new Text3DInfo[text3ds.Count];
+                    // Copy the display list to an array since the display list can be modified
+                    // at any time
+                    text3ds.CopyTo(text3DArray);
+
+                    // Render the 3D texts in the display list in outline style with red color
+                    foreach (Text3DInfo text3d in text3DArray)
+                        UI3DRenderer.Write3DText(text3d.Text, vectorFont, UI3DRenderer.Text3DStyle.Outline,
+                            Color.Red, text3d.Transform);
+                }
+                catch (Exception)
+                {
+                }
+            }
             scene.Draw(elapsedTime, false);
         }
 
@@ -589,15 +729,17 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
         }
         private void ShootBox(Vector3 near, Vector3 far)
         {
-            GeometryNode shootBox = new GeometryNode("ShooterBox" + shooterID++);
-            shootBox.Model = boxModel;
-            shootBox.Material = shooterMat;
+            
+            GeometryNode shootBox = new ShootBoxNode("ShooterBox" + shooterID++);
+#if !WINDOWS
+            shootBox.Physics = new MataliObject(shootBox);
+            ((MataliObject)shootBox.Physics).CollisionStartCallback = BoxCollideWithGround;
+#endif
             shootBox.Physics.Interactable = true;
             shootBox.Physics.Collidable = true;
             shootBox.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
             shootBox.Physics.Mass = 600f;
             shootBox.AddToPhysicsEngine = true;
-
             // Calculate the direction to shoot the box based on the near and far point
             Vector3 linVel = far - near;
             linVel.Normalize();
@@ -606,10 +748,16 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
 
             // Assign the initial velocity to this shooting box
             shootBox.Physics.InitialLinearVelocity = linVel;
-
+            
             TransformNode shooterTrans = new TransformNode();
             shooterTrans.Translation = near;
             shooterTrans.Scale = new Vector3(10, 10, 10);
+
+            //Update Record in shootBoxAry array
+            shootBoxAry[shootBoxNextPtr] = shooterTrans;
+            shootBoxNextPtr = (shootBoxNextPtr + 1)%MAX_SHOOTBOX;
+            if(shootBoxAry[shootBoxNextPtr]!=null)
+                groundMarkerNode.RemoveChild(shootBoxAry[shootBoxNextPtr]);
 
             groundMarkerNode.AddChild(shooterTrans);
             shooterTrans.AddChild(shootBox);
@@ -631,32 +779,7 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             }
         }
         private void MousePressHandler(int button, Point point)
-        {/*
-            if (button == MouseInput.LeftButton)
-            {
-                Vector3 nearSource = new Vector3(point.X, point.Y, -5000);
-                Vector3 farSource = new Vector3(point.X, point.Y, -5);
-
-                Vector3 nearPoint = gameService.GraphicsDevice.Viewport.Unproject(nearSource,
-                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
-                Vector3 farPoint = gameService.GraphicsDevice.Viewport.Unproject(farSource,
-                    State.ProjectionMatrix, State.ViewMatrix, groundMarkerNode.WorldTransformation);
-                GeometryNode shootBox = new GeometryNode("ShooterBox" + shooterID++);
-                shootBox.Model = boxModel;
-                shootBox.Material = shooterMat;
-                shootBox.Physics.Interactable = true;
-                shootBox.Physics.Collidable = true;
-                shootBox.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
-                shootBox.Physics.Mass = 600f;
-                shootBox.AddToPhysicsEngine = false;
-
-                TransformNode shooterTrans = new TransformNode();
-                shooterTrans.Translation = nearPoint;
-                shooterTrans.Scale = new Vector3(10, 10, 10);
-
-                groundMarkerNode.AddChild(shooterTrans);
-                shooterTrans.AddChild(shootBox);
-            }*/
+        {
             GeometryNode selectedObj = selectObj(point);
             if (selectedObj == null)
                 return;
@@ -664,7 +787,7 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             {
                 case Mode.play:
                     if (selectedObj.Name == "mole")
-                        ((MoleHole.MoleNode) selectedObj).myMoleHole.hit();
+                        //((MoleHole.MoleNode) selectedObj).myMoleHole.hit();
                     if (selectedObj.Name == "pauseButton")
                         PauseGame();
                     break;
@@ -894,7 +1017,11 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
                 moleNode.Material = moleMat;
                 moleNode.Physics.Shape = ShapeType.Sphere;
                 moleNode.Physics.Pickable = true;
+                moleNode.Physics.Collidable = true;
+                moleNode.Physics.Interactable = true;
+                moleNode.Physics.Mass = 3000;
                 moleNode.AddToPhysicsEngine = true;
+                moleNode.Physics.MaterialName = "mole";
                 moleTransNode = new TransformNode();
                 //moleTransNode.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(-90));
                 moleTransNode.Translation = new Vector3(0, -12, 0);
@@ -1087,7 +1214,53 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             }
 
         }
+        private class ShootBoxNode : GeometryNode
+        {
+            private int shootBoxBounceCount;
+            public ShootBoxNode(String name)
+            {
+                Name = name;
+                this.Model = new Box(Vector3.One);
 
+                // Create a material for shooting box models
+                Material shooterMat = new Material();
+                shooterMat.Diffuse = Color.Pink.ToVector4();
+                shooterMat.Specular = Color.Yellow.ToVector4();
+                shooterMat.SpecularPower = 10;
+                this.Material = shooterMat;
+
+                shootBoxBounceCount = MAX_BOUNCE;
+            }
+            public void bounce()
+            {
+                shootBoxBounceCount--;
+                if (shootBoxBounceCount < 0)
+                {
+                    Material shooterMat = new Material();
+                    shooterMat.Diffuse = Color.Red.ToVector4();
+                    shooterMat.Specular = Color.Yellow.ToVector4();
+                    shooterMat.SpecularPower = 10;
+                    this.material = shooterMat;
+                }
+            }
+            public bool bounceTest()
+            {
+                if (shootBoxBounceCount >= 0)
+                    return true;
+                else return false;
+            }
+        }
+        /// <summary>
+        /// A class to store 3D text information.
+        /// </summary>
+        
+        private class Text3DInfo
+        {
+            public String Text;
+            public float Duration;
+            public float ElapsedTime;
+            public Matrix Transform;
+        }
 
     }
 }

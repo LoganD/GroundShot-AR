@@ -216,16 +216,18 @@ C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\marker8.pat
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\marker9.patt
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\patt.hiro
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\MarkerImageHiro.jpg
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\DebugFont.xnb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\Sample.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\MarkerImage_320x240.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\diffuse.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\specular.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\floor_wood.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\grass.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\Arial-24-Vector.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\Sample.xnb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Content\rubber_ball_01.xnb
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.dll
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.pdb
-C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\obj\Windows Phone\Debug\SelectAR - Phone.csprojResolveAssemblyReference.cache
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\obj\Windows Phone\Debug\Tutorial8 - Optical Marker Tracking - PhoneLib.dll
 C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\obj\Windows Phone\Debug\Tutorial8 - Optical Marker Tracking - PhoneLib.pdb
+C:\Users\Steven Feiner\Documents\GitHub\HammerTime\SelectAR\Tutorial8 - Optical Marker Tracking\obj\Windows Phone\Debug\SelectAR - Phone.csprojResolveAssemblyReference.cache
