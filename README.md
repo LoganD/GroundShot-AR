@@ -9,3 +9,9 @@ Unfortunately, running this game is now difficult becuase the AR library it is b
 
 Screenshots:
 ![alt tag](http://imgur.com/n2Wv8It.png)
+
+![alt tag](http://imgur.com/2Udzw7w.png)
+
+![alt tag](http://imgur.com/K3At5Bf.png)
+![alt tag](http://imgur.com/Zkryty9.png)
+![alt tag](http://imgur.com/OlcylGV.png)
