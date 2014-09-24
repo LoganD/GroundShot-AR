@@ -8,4 +8,4 @@ See a video of the game play here: https://www.youtube.com/watch?v=Ka0NSPVUcyU&l
 Unfortunately, running this game is now difficult becuase the AR library it is built on top of is no longer maintained.
 
 Screenshots:
-![alt tag](http://imgur.com/n2Wv8It)
+![alt tag](http://imgur.com/n2Wv8It.png)
