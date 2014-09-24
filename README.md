@@ -6,3 +6,6 @@ This is an augmented reality game for windows phone that is a take on wack-a-mol
 See a video of the game play here: https://www.youtube.com/watch?v=Ka0NSPVUcyU&list=UUktP_5xPt23VIVNSQW5D5vQ
 
 Unfortunately, running this game is now difficult becuase the AR library it is built on top of is no longer maintained.
+
+Screenshots:
+![alt tag](http://imgur.com/n2Wv8It)
